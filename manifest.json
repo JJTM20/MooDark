@@ -1,0 +1,25 @@
+{
+	"name": "MooDark",
+	"description": "Dark Mode for Moodle",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": [ "storage", "activeTab", "scripting" ],
+	"action": {
+		"default_popup": "popup.html"
+	},
+	"icons": {
+		"16": "16x16.png",
+		"48": "48x48.png",
+		"128": "128x128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [ "https://www.moodle.aau.dk/my/" ],
+			"css": [ "Stylesheet.css" ],
+			"js": [ "contentScript.js" ]
+		}
+	]
+}
