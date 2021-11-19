@@ -29,7 +29,9 @@ function ToggleDarkMode(toggleBtn) {
     });
     //document.querySelectorAll('span[class*="text-truncate"]').forEach(element => element.style.color = "#c0c1c2");
     document.querySelectorAll('div[class*="w-100 text-truncate"]').forEach(element => element.style.color = "#c0c1c2");
-    document.getElementsByClassName('.bg-white').style.backgroundColor = "#c0c1c2";
+    let navbar = document.querySelector('.navbar');
+    navbar.classList.remove('bg-white');
+    navbar.style.backgroundColor = "#c0c1c2";
 }
 function ToggleLightMode(toggleBtn) {
 
